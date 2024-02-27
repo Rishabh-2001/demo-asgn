@@ -1,0 +1,15 @@
+.header{
+    background-color: black;
+    padding: 0.25em 2em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-side-header{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}

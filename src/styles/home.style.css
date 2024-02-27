@@ -1,0 +1,371 @@
+.home-container {
+  background-color: black;
+  color: white;
+  opacity: 1;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.img-frame {
+  position: relative;
+  width: 70vw;
+  max-width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: url("../assets/Frame 8355.svg") center/cover no-repeat;
+  color: white;
+  height: 70vh;
+  overflow: hidden;
+  opacity: 0.2;
+  position: relative;
+}
+
+.img-frame::before,
+.img-frame::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 20%;
+  z-index: 2; /* Ensure gradient layers are above images */
+}
+
+.img-frame::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.img-frame::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+section {
+  width: 70vw;
+  margin: 2rem auto;
+  margin-bottom: 3rem;
+}
+.box-wrapper {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+  opacity: 1 !important; /* Set the opacity to 1 for .box-wrapper */
+  top: 45%;
+  transform: translateX(50%);
+  cursor: pointer;
+}
+
+.box {
+  width: 33%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-family: "Teko";
+  font-weight: 700;
+  height: 8rem;
+}
+.content {
+  background: linear-gradient(to top, #ff5c00, #ff004c);
+}
+.ads {
+  background: linear-gradient(to top, #1ac7a8, #38ae25);
+}
+.unlimited {
+  background: linear-gradient(to top, #b611df, #0042db);
+}
+.number {
+  font-size: 1rem;
+}
+.box .heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-heading {
+  font-weight: 700;
+  font-size: 20px;
+  /* font-family: 'Robotto'; */
+  /* line-height: 23px; */
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.plan-container {
+  background-color: black;
+  color: white;
+}
+.amt-time {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #bda10c;
+}
+.plan-card {
+  margin: 1rem auto;
+  border-radius: 1rem;
+  background-color: #292a2f;
+  display: flex;
+  flex-direction: column;
+}
+/* .gradient-border-container {
+    display: inline-block;
+    border-radius: 16px; 
+  
+  }
+  .gradient-border {
+      border-width: 2px; 
+      border-image: linear-gradient(to right, #FFA800, #FF00D6, #0075FF) ;
+      border-image-slice: 1;
+      border-style: solid;
+  } */
+
+.gradient-border-container {
+  margin: 1rem auto;
+  position: relative;
+  /* display: inline-block; */
+  border-radius: 16px; /* Set the border radius for the container */
+
+  /* Create a mask to curve the border */
+  overflow: clip;
+}
+
+.gradient-border {
+  border-width: 2px; /* Adjust the border width as needed */
+  border-image: linear-gradient(to right, #ffa800, #ff00d6, #0075ff);
+  border-image-slice: 1;
+  border-style: solid;
+  /* border-radius: 16px; */
+
+  /* Apply a pseudo-element to create the curved border effect */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 1rem,
+      black calc(100% - 1rem),
+      transparent
+    );
+    mask-composite: destination-out;
+  }
+}
+.discount-card {
+  background-color: #1c1c1c;
+  /* width: 70vw; */
+
+  margin: 0 auto;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem;
+}
+.discount-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #7d7d7d;
+}
+
+.discount-inner-first {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.discount-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.remove-text {
+  color: red;
+}
+
+.creator-intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.creator-intro p {
+  margin: 0;
+  padding: 0;
+}
+.header-plan-card {
+  background: #0e9b46;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.plan-card-content {
+  padding: 0.85rem 0.75rem 0.5rem 0.85rem;
+  border-radius: 1rem;
+}
+.card-outer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-inner-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card-inner-container img {
+  width: 24px;
+  cursor: pointer;
+}
+.card-inner-container .amt-primary {
+  color: #bda10c;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.card-inner-container .amt-secondary {
+  color: #7d7d7d;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-decoration: line-through;
+}
+.amt-off-div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.discount-off {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  color: white;
+  background-color: #3980ff;
+  font-size: 0.8rem;
+}
+
+.subscribe-cont {
+  background: linear-gradient(to right, #ffa800, #ff00d6, #0075ff, #0075ff);
+  padding: 20px; /* Adjust padding as needed */
+  color: white; /* Set text color */
+  border-radius: 10px; /* Set border radius as needed */
+  text-align: center; /* Center text */
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe-cont .img-group-icon {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+}
+.parent {
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.slider {
+  margin: 0 20px;
+  overflow: "hidden";
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  object-fit: contain; /* Ensure the image covers the entire container */
+  height: 16rem;
+  width: 16rem;
+
+  /* width: 300px;
+    height: 320px; */
+}
+
+.react-multi-carousel-list {
+  padding: 0rem 0 2rem 0;
+}
+
+.custom-dot-list-style button {
+  border: none;
+  background: rgb(255, 68, 68);
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button {
+  background: rgb(255, 68, 68) !important;
+}
+
+.round-img img {
+  border-radius: 50%; /* Make the images round */
+
+  object-fit: cover; /* Ensure the image covers the entire container */
+  height: 12rem;
+  width: 12rem;
+  color: white;
+}
+
+.subs-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+.sub-box {
+  border: 1px solid #5b5b5b;
+  border-radius: 1rem;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+.sub-card {
+  /* width: 60%; */
+
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem auto;
+  align-items: center;
+}
+.sub-card img {
+  width: 60px;
+}
+.sub-card p {
+  color: #5b5b5b;
+}
+.sub-card div {
+  /* width: 50%; */
+  /* line-height: 8px; */
+  text-wrap: wrap;
+}
+
+.accordion-item {
+  color: #818080;
+  padding: 0.5rem 1rem;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
